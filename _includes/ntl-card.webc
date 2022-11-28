@@ -1,0 +1,15 @@
+<div class="my-component">
+  <p @html="title"></p>
+</div>
+
+<style>
+  .my-component {
+    padding: 1rem;
+    border: 1px solid red;
+  }
+
+  .my-component p {
+    font-family: system-ui;
+    font-weight: 700;
+  }
+</style>

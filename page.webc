@@ -1,0 +1,29 @@
+---
+layout: "layout.webc"
+---
+
+<is-land on:visible>
+  <div id="vue-app">
+    <h1>Selected: {{ current }}</h1>
+    <ntl-card
+      v-for="person in team"
+      @title="{{ person }}"
+      v-on:click="current = person"
+    ></ntl-card>
+    <hr />
+    <ntl-card @title="{{ current }}"></ntl-card>
+  </div>
+
+  <template data-island>
+    <script type="module">
+      import { createApp } from "https://unpkg.com/vue@3.2.36/dist/vue.esm-browser.prod.js";
+
+      createApp({
+        data: () => ({
+          team: ["Jerry", "Bob", "Mickey", "Phil"],
+          current: "Noone",
+        }),
+      }).mount("#vue-app");
+    </script>
+  </template>
+</is-land>

@@ -1,0 +1,2 @@
+- Can CSS / JS be outputted to external files?
+- Pain point: prop casing
